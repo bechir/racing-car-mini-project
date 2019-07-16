@@ -1,0 +1,267 @@
+#app{padding: 0;margin: 0;}
+
+.top{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.background{
+  height: 300px;
+  background: url(images/bg.png) repeat-x;
+  background-size: contain;
+  z-index: 10;
+  position: relative;
+  margin-left: -9000px;
+  width: 900000px;
+  overflow: hidden;
+}
+
+.fires-container{
+  position: absolute;
+  top: 20px;
+  left: 143px;
+  width: 1300px;
+}
+
+.enemy{
+  position:absolute;
+  top: 7px;
+  left: 1600px;
+  width: 50px;
+}
+
+img.fire{
+  position:absolute;
+  top: -7px;
+  left: -55px;
+  width: 70px;
+}
+
+#car-container{
+  position: absolute;
+  top: 231px;
+  z-index: 100;
+  width: 145px;
+  left: 100px;
+}
+
+.car{
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
+.car-led{
+  display:block;
+  position:absolute;
+  content: " ";
+}
+
+.car-led-back{
+  top: 30px;
+  left: -11px;
+  width: 50px;
+  height:10px;
+  background-color: #ea181840;
+  transform: rotate(-17deg);
+  box-shadow: 0 0 19px 5px #ea181882;  
+}
+
+.car-led-front{
+  top: 60px;
+  left: 145px;
+  width: 730px;
+  height:1px;
+  background-color: #f3d06d78;
+  transform: rotate(4deg);
+  box-shadow: 0 0 19px 5px #f1d37fd4;
+  opacity: 0.53;
+}
+
+.panneau-stop{
+  width:75px;
+  top: -15px;
+  left: 600px;
+  position: absolute;
+}
+
+.buttons {
+  position: relative;
+  min-height: 420px;
+  width: 540px;
+  background: #fff;
+  margin-top: 31px;
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 7px 10px rgba(0,0,0,.25);
+  transition: all .4s ease;
+}
+
+.buttons:hover {
+  box-shadow: 17px 20px rgba(0,0,0,.15);
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+}
+
+.directions-container{
+  margin-top: 7px;
+  overflow:hidden;
+}
+
+img.led,
+.directions-x,
+.directions-y,
+.btn-move-stop{
+  width: 40px;
+  display: block;
+  margin: 31px auto;
+}
+
+.directions-x,
+.directions-y,
+.btn-move-stop{
+  width:auto;
+  outline:none;
+  border:0;
+  background-color: #FFF;
+  color: #4CAF50;
+  font-size: 3.3rem;
+  transition: .5s;
+}
+.directions-x:hover,
+.directions-y:hover,
+.btn-move-stop:hover {
+  font-size: 4.3rem;
+  opacity: .9;
+  color:#DB302A;
+  transform: scale(1.3);
+  transition:.5s;
+}
+
+.play:before {
+  content: "\e072";
+}
+.pause:before {
+  content: "\e073";
+}
+.led{
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+.led.led-back.off{
+  background-image: url(images/ledback.jpg);
+}
+.led.led-back.on{
+  background-image: url(images/ledback-on.png);
+}
+.led.led-front.off{
+  background-image: url(images/ledfront.jpg);
+}
+.led.led-front.on{
+  background-image: url(images/ledfront-on.png);
+}
+
+.speed {
+  background-color: #000;
+  font-family: 'Roboto',sans-serif;
+  background: linear-gradient(145deg, #4CAF50 0%, #DB302A 100%) no-repeat;
+  padding: 3px;
+  border-radius: 7px;
+  margin:0;
+}
+
+.speed h1{
+  font-family: fantasy;
+  color: #fff;
+  font-size: 2.3rem;
+  margin: 7px;
+}
+
+.speed .speed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-minmax {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.box-minmax span:first-child {
+  margin-left: 5px;
+}
+
+.rs-range {
+  margin-top: 15px;
+  -webkit-appearance: none;
+}
+
+.rs-range:focus {
+  outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 26px;
+  width: 7px;
+  border-radius: 21px;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -13px;
+}
+  
+
+.rs-label {
+  position: relative;
+  transform-origin: center center;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 3px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  margin-left: 0px;
+  left: 67px;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 19px;
+}
+
+.rs-label::after {
+  content: "km/h";
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  margin-top: -3px;
+  font-family:fantasy !important;
+}
